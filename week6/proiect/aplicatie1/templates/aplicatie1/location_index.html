@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+    <p>Lista locatii curente</p>
+    <table>
+        <thead>
+        <tr>
+            <th>Counter</th>
+            <th>City</th>
+            <th>Country</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in location_list %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ item.city }}</td>
+                <td>{{ item.country }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
